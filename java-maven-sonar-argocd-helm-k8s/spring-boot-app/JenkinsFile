@@ -32,7 +32,7 @@ pipeline {
       }
       steps {
         //withCredentials([string(credentialsId: 'sonar', variable: '')]) {
-         withSonarQubeEnv(credentialsId: 'sonar') {
+         withSonarQubeEnv(credentialsId: 'sq1') {
          sh 'cd /var/jenkins_home/workspace/haykel_pipeline_1/java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn sonar:sonar // -X -Dsonar.secret=${sonar} -Dsonar.host.url=${SONAR_URL}'
         }
       }
