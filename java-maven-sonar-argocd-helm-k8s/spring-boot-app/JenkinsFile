@@ -32,9 +32,9 @@ pipeline {
       }
       steps {
         // withCredentials([gitUsernamePassword(credentialsId: 'test1', gitToolName: 'Default')]) {
-            
+           withSonarQubeEnv(installationName: ‘sq1’, credentialsId: ‘test1’) {    
         // withCredentials([string(credentialsId: 'test1', variable: '')]) {
-           withSonarQubeEnv('sq1') {
+         //  withSonarQubeEnv('sq1') {
            sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn sonar:sonar // -Dsonar.secret=${test1} -Dsonar.host.url=${SONAR_URL}'
           // sh ' mvn sonar:sonar // -X -Dsonar.secret=${sonar} -Dsonar.host.url=${SONAR_URL}'
         }
