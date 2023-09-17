@@ -31,6 +31,8 @@ pipeline {
         SONAR_URL = "http://51.91.204.154:9001"
       }
       steps {
+           sh 'java -version'
+           sh'mvn-version'
         
         //   withSonarQubeEnv([string(installationName: ‘sq1’, credentialsId: ‘test1’)]) {    
         // withCredentials([string(credentialsId: 'sonarhay', variable: '')]) {
