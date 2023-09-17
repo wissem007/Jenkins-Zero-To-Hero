@@ -32,7 +32,7 @@ pipeline {
       }
       steps {
            sh 'java -version'
-           sh'mvn-version'
+           sh 'mvn -version'
         
         //   withSonarQubeEnv([string(installationName: ‘sq1’, credentialsId: ‘test1’)]) {    
         // withCredentials([string(credentialsId: 'sonarhay', variable: '')]) {
