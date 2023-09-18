@@ -48,7 +48,7 @@ pipeline {
           //   sh ' mvn sonar:sonar // -X -Dsonar.secret=${sonar} -Dsonar.host.url=${SONAR_URL}'
             //  withCredentials([string(credentialsId: 'SONAR', variable: 'sonarhay')]) {
             //    sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn sonar:sonar -Dsonar.login=$sonarhay -Dsonar.host.url=${SONAR_URL}' 
-        }
+      //  }
       }
     }
     stage('Build and Push Docker Image') {
