@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'agentsock'
-     
-    }
-  }
+  agent any 
   tools {
      maven 'mvn'
   }
