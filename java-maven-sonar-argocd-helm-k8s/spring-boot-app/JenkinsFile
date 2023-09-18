@@ -35,11 +35,11 @@ pipeline {
            
         
         //   withSonarQubeEnv([string(installationName: ‘sq1’, credentialsId: ‘test1’)]) {    
-           withCredentials([string(credentialsId: 'sonar', variable: '')]) {
+           withCredentials([string(credentialsId: 'sonarhay', variable: '')]) {
          //  withSonarQubeEnv('SONAR') {
         //     withMaven(maven: 'mvn') { 
          //  withSonarQubeEnv([string(credentialsId: '', installationName: 'sq1')]){
-             sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean install sonar:sonar -Dsonar.secret=${sonar} -Dsonar.host.url=${SONAR_URL}'
+             sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean install sonar:sonar -Dsonar.secret=${sonarhay} -Dsonar.host.url=${SONAR_URL}'
              // sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn org.sonarsource.scanner.maven:sonar-maven-plugin:5.0.1.3006:sonar'
           //   sh ' mvn sonar:sonar // -X -Dsonar.secret=${sonar} -Dsonar.host.url=${SONAR_URL}'
           
