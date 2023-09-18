@@ -23,7 +23,7 @@ pipeline {
         //sh 'mvn clean package'
       // withMaven(maven: 'mvn') {
        // sh 'cd /var/jenkins_home/workspace/haykel_pipeline_1/java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean package'
-        sh 'cd /var/jenkins_home/workspace/haykel_pipeline_1/java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean verify sonar:sonar -Dsonar.projectKey=haykel -Dsonar.projectName='haykel''
+        sh "cd /var/jenkins_home/workspace/haykel_pipeline_1/java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean verify sonar:sonar -Dsonar.projectKey=haykel -Dsonar.projectName='haykel'"
 
     //}  
     }
