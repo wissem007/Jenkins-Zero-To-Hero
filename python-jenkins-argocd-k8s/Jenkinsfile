@@ -21,7 +21,9 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t abhishekf5/cicd-e2e:${BUILD_NUMBER} .
+                    
+                    sh "mvn clean package"
+                    docker.build("monapp:${env.BUILD_NUMBER}")
                     '''
                 }
             }
