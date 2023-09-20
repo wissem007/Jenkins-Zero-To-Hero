@@ -1,6 +1,7 @@
 pipeline {
     
     agent any 
+    agent {label 'maitre'}
     
     environment {
         IMAGE_TAG = "${BUILD_NUMBER}"
