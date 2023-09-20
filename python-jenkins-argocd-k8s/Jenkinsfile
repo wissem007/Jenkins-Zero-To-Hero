@@ -18,12 +18,12 @@ pipeline {
 
         stage('Build Docker'){
             steps{
-                script{
-                    sh '''
+script{
+    sh '''
         echo 'Buid Docker Image'
         docker.build("monapp:${env.BUILD_NUMBER}")
     '''
-                }
+}
             }
         }
 
