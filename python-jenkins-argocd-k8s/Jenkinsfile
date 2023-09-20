@@ -20,11 +20,9 @@ pipeline {
             steps{
                 script{
                     sh '''
-                    echo 'Buid Docker Image'
-                    
-            
-                    docker.build("monapp:${env.BUILD_NUMBER}")
-                    '''
+        echo 'Buid Docker Image'
+        docker.build("monapp:${env.BUILD_NUMBER}")
+    '''
                 }
             }
         }
