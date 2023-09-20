@@ -16,16 +16,15 @@ pipeline {
            }
         }
 
-        stage('Build Docker'){
-            steps{
-script{
-    sh '''
-        echo 'Buid Docker Image'
-        docker.build("monapp:${env.BUILD_NUMBER}")
-    '''
-}
-            }
+stage('Build Docker') {
+    steps {
+        script {
+            echo 'Build Docker Image'
+            docker.build("monapp:${env.BUILD_NUMBER}")
         }
+    }
+}
+
 
  
         
