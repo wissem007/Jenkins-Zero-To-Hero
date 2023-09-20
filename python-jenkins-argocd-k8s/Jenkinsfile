@@ -22,7 +22,7 @@ pipeline {
                     sh '''
                     echo 'Buid Docker Image'
                     
-                    sh "mvn clean package"
+            
                     docker.build("monapp:${env.BUILD_NUMBER}")
                     '''
                 }
